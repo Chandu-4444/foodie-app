@@ -2,10 +2,14 @@
 const request = require("supertest");
 const app = require("../server");
 
-describe("Fetch Posts", function () {
-	it("Should fetch posts", function (done) {
+describe("Authenticate User", function () {
+	it("Should login user", function (done) {
 		request(app)
-			.get("/api/posts/")
+			.get("/api/v1/auth/login")
+			.body({
+				email: "testnode",
+				password: "testnode",
+			})
 			.set(
 				"Authorization",
 				"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFkYWY3ODJjNjg2YmYzNGE4YWNlNTJlIn0sImlhdCI6MTY1MDg3ODQ3NCwiZXhwIjoxNjUwODgyMDc0fQ.jxdajBgZlRGiIEoG7D1hbmTtmwLFkoCsP4hp4gko3eY"
@@ -14,9 +18,9 @@ describe("Fetch Posts", function () {
 			.expect(200, done);
 	});
 
-	it("Should fetch users' feed", function (done) {
+	it("Should fetch users", function (done) {
 		request(app)
-			.get("/api/posts/feed")
+			.get("/api/v1/users")
 			.set(
 				"Authorization",
 				"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFkYWY3ODJjNjg2YmYzNGE4YWNlNTJlIn0sImlhdCI6MTY1MDg3ODQ3NCwiZXhwIjoxNjUwODgyMDc0fQ.jxdajBgZlRGiIEoG7D1hbmTtmwLFkoCsP4hp4gko3eY"

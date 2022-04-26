@@ -2,8 +2,8 @@
 const request = require("supertest");
 const app = require("../server");
 
-describe("Authentication User", function () {
-	it("Should fetch authenticated user on providing auth token", function (done) {
+describe("Authentication Comments", function () {
+	it("Should fetch authenticated user comments on providing auth token and post id", function (done) {
 		request(app)
 			.get("/api/auth/")
 			.set(
@@ -14,7 +14,7 @@ describe("Authentication User", function () {
 			.expect(200, done);
 	});
 
-	it("Should return invalid token", function (done) {
+	it("Should return invalid token on invalid request", function (done) {
 		request(app)
 			.get("/api/auth")
 			.set(

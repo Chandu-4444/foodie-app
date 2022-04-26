@@ -2,8 +2,8 @@
 const request = require("supertest");
 const app = require("../server");
 
-describe("Authentication User", function () {
-	it("Should fetch authenticated user on providing auth token", function (done) {
+describe("Authentication Post", function () {
+	it("Should fetch authenticated posts on providing auth token", function (done) {
 		request(app)
 			.get("/api/auth/")
 			.set(
