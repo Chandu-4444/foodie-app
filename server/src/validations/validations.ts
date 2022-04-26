@@ -1,4 +1,4 @@
-import { ErrorHandler } from '@/middlewares';
+import { ErrorHandler } from '../middlewares';
 import { NextFunction, Request, Response } from 'express';
 import Joi, { Schema } from 'joi';
 

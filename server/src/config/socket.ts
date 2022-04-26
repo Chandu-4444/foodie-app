@@ -1,5 +1,5 @@
-import config from '@/config/config';
-import User from '@/schemas/UserSchema';
+import config from '../config/config';
+import User from '../schemas/UserSchema';
 import { Application } from "express";
 import { Server } from "http";
 

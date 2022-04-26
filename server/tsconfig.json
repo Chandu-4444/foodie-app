@@ -32,7 +32,7 @@
   "include": [
     "./src/**/*",
     ".env"
-  ],
+, "tests"  ],
   "exclude": [
     "node_modules",
   ]

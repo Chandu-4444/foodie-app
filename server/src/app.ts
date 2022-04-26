@@ -1,3 +1,4 @@
+// @ts-nocheck
 import cors from "cors";
 import csurf from "csurf";
 import createDebug from "debug";

@@ -1,8 +1,8 @@
 //@ts-ignore
-import { makeResponseJson, sessionizeUser } from "@/helpers/utils";
-import { ErrorHandler } from "@/middlewares/error.middleware";
-import { IUser } from "@/schemas/UserSchema";
-import { schemas, validateBody } from "@/validations/validations";
+import { makeResponseJson, sessionizeUser } from "../../../helpers/utils";
+import { ErrorHandler } from "../../../middlewares/error.middleware";
+import { IUser } from "../../../schemas/UserSchema";
+import { schemas, validateBody } from "../../../validations/validations";
 import { NextFunction, Request, Response, Router } from "express";
 import passport from "passport";
 
