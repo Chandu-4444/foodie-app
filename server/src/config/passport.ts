@@ -7,7 +7,7 @@ import LocalStrategy from "passport-local";
 export default function (passport) {
 	passport.serializeUser(function (user: IUser, done: any) {
 		done(null, user._id);
-		console.log("SERIALIZE", user);
+		// console.log("SERIALIZE", user);
 	});
 
 	// used to deserialize the user

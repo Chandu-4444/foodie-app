@@ -8,6 +8,10 @@
         {
             "url": "http://localhost:9000",
             "description": "Local server"
+        },
+        {
+            "url": "https://foodie-app.azurewebsites.net",
+            "description": "Production server"
         }
     ],
     "components": {
