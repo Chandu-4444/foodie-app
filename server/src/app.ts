@@ -1,6 +1,7 @@
 // @ts-nocheck
 import cors from "cors";
 import csurf from "csurf";
+import path from "path";
 import createDebug from "debug";
 import express from "express";
 import session, { SessionOptions } from "express-session";
@@ -52,14 +53,20 @@ class Express {
 		this.app.use(passport.session());
 		this.app.use("/api", routers);
 
-		// catch 404 and forward to error handler
-		this.app.use(function (req, res, next) {
-			next(createError(404));
-		});
+		console.log(__dirname);
+		this.app.use(express.static('build'))
+		// this.app.get("*", (req, res) => {
+		// 	res.sendFile(path.resolve(__dirname, "build", "index.html"));
+		// });
 
-		// error handler
-		this.app.use(csurf());
-		this.app.use(errorHandler);
+		// catch 404 and forward to error handler
+		// this.app.use(function (req, res, next) {
+		// 	next(createError(404));
+		// });
+
+		// // error handler
+		// this.app.use(csurf());
+		// this.app.use(errorHandler);
 	}
 
 	public onError() {
