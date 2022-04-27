@@ -7,7 +7,7 @@ describe("Authenticate User", function () {
 		request(app)
 			.get("/api/v1/auth/login")
 			.body({
-				email: "testnode",
+				username: "testnode",
 				password: "testnode",
 			})
 			.set(
@@ -25,6 +25,10 @@ describe("Authenticate User", function () {
 				"Authorization",
 				"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFkYWY3ODJjNjg2YmYzNGE4YWNlNTJlIn0sImlhdCI6MTY1MDg3ODQ3NCwiZXhwIjoxNjUwODgyMDc0fQ.jxdajBgZlRGiIEoG7D1hbmTtmwLFkoCsP4hp4gko3eY"
 			)
+			.body({
+				username: "testnode",
+				password: "testnode1",
+			})
 			.expect("content-type", /json/)
 			.expect(200, done);
 	});
