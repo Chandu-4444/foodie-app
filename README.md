@@ -1,18 +1,11 @@
-# WBD Project - Foodie App
-
-Foodie, a social media exclusively for posting and sharing food content for the foodies by the foodies.
-
-## Group No 22
-
-- Gireesh Kumar Reddy Chumdi (S20190010036)
-
--  Sai Bhargav Reddy Kanala (S20190010083)
-
-- Khadyothan Dasari (S20190010040)
-
 - Chandra Kiran G (S20190010029)
+- Bhavesh Kumar C (S0190010034)
+- Sai Bhargava Reddy K (S20190010083)
+- Navdeep K (S20190010099)
+- Karthik K (S20190010100)
+- Venkata Varun K (S20190020222)
 
-- Navdeep Konkipudi (S20190010099)
+
 
 
 
